@@ -239,7 +239,7 @@
   <joint name="shifted_Base_joint" type="fixed">
     <parent link="shifted_base"/>
     <child link="shifted_Base"/>
-    <origin xyz="0.0 0.0 0" rpy="0 0 0.0872665"/>
+    <origin xyz="0.0 0.0 0" rpy="0.52 0.52 0.0872665"/>
   </joint>
 
   <link name="shifted_Base">

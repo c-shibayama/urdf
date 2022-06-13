@@ -1,8 +1,11 @@
 <?xml version="1.0" ?>
-<robot name="jisaku6def_arm">
+<robot name="jisaku6dof_arm">
 
   <material name="black">
-    <color rgba="0.0 0.0 0.0 1.0"/>
+    <color rgba="1.0 0.4 0.0 1.0"/>
+  </material>
+  <material name="real_black">
+    <color rgba="0.5 0.5 0.5 1.0"/>
   </material>
   <material name="orange">
     <color rgba="1.0 0.4 0.0 1.0"/>
@@ -21,13 +24,13 @@
     <collision>
       <origin xyz="0 0 0.025" rpy="0 0 0"/>
       <geometry>
-        <box size="0.15 0.15 0.05"/>
+        <box size="0.02 0.02 0.05"/>
       </geometry>
     </collision>
     <visual>
       <origin xyz="0 0 0.025" rpy="0 0 0"/>
       <geometry>
-        <box size="0.15 0.15 0.05"/>
+        <box size="0.02 0.02 0.05"/>
       </geometry>
       <material name="orange"/>
     </visual>
@@ -50,13 +53,13 @@
     <collision>
       <origin xyz="0 0 0.05" rpy="0 0 0"/>
       <geometry>
-        <box size="0.05 0.05 0.1"/>
+        <box size="0.01 0.01 0.1"/>
       </geometry>
     </collision>
     <visual>
       <origin xyz="0 0 0.05" rpy="0 0 0"/>
       <geometry>
-        <box size="0.05 0.05 0.1"/>
+        <box size="0.01 0.01 0.1"/>
       </geometry>
       <material name="black"/>
     </visual>
@@ -79,13 +82,13 @@
     <collision>
       <origin xyz="0 0 0.15" rpy="0 0 0"/>
       <geometry>
-        <box size="0.05 0.05 0.3"/>
+        <box size="0.01 0.01 0.3"/>
       </geometry>
     </collision>
     <visual>
       <origin xyz="0 0 0.15" rpy="0 0 0"/>
       <geometry>
-        <box size="0.05 0.05 0.3"/>
+        <box size="0.01 0.01 0.3"/>
       </geometry>
       <material name="orange"/>
     </visual>
@@ -108,13 +111,13 @@
     <collision>
       <origin xyz="0 0 0.1" rpy="0 0 0"/>
       <geometry>
-        <box size="0.05 0.05 0.2"/>
+        <box size="0.01 0.01 0.2"/>
       </geometry>
     </collision>
     <visual>
       <origin xyz="0 0 0.1" rpy="0 0 0"/>
       <geometry>
-        <box size="0.05 0.05 0.2"/>
+        <box size="0.01 0.01 0.2"/>
       </geometry>
       <material name="black"/>
     </visual>
@@ -137,13 +140,13 @@
     <collision>
       <origin xyz="0 0 0.1" rpy="0 0 0"/>
       <geometry>
-        <box size="0.05 0.05 0.2"/>
+        <box size="0.01 0.01 0.2"/>
       </geometry>
     </collision>
     <visual>
       <origin xyz="0 0 0.1" rpy="0 0 0"/>
       <geometry>
-        <box size="0.05 0.05 0.2"/>
+        <box size="0.01 0.01 0.2"/>
       </geometry>
       <material name="orange"/>
     </visual>
@@ -166,13 +169,13 @@
     <collision>
       <origin xyz="0 0 0.025" rpy="0 0 0"/>
       <geometry>
-        <box size="0.05 0.05 0.05"/>
+        <box size="0.01 0.01 0.05"/>
       </geometry>
     </collision>
     <visual>
       <origin xyz="0 0 0.025" rpy="0 0 0"/>
       <geometry>
-        <box size="0.05 0.05 0.05"/>
+        <box size="0.01 0.01 0.05"/>
       </geometry>
       <material name="black"/>
     </visual>
@@ -195,13 +198,13 @@
     <collision>
       <origin xyz="0 0 0.05" rpy="0 0 0"/>
       <geometry>
-        <box size="0.05 0.05 0.1"/>
+        <box size="0.01 0.01 0.1"/>
       </geometry>
     </collision>
     <visual>
       <origin xyz="0 0 0.05" rpy="0 0 0"/>
       <geometry>
-        <box size="0.05 0.05 0.1"/>
+        <box size="0.01 0.01 0.1"/>
       </geometry>
       <material name="orange"/>
     </visual>
@@ -212,18 +215,13 @@
     </inertial>
   </link>
 
-
   <joint name="hand_no_saki_joint" type="fixed">
     <parent link="link6"/>
     <child link="virtual_link"/>
     <origin xyz="0 0 0.1" rpy="0 0 0"/>
-    <axis xyz="0 0 1"/>
-    <limit effort="30" lower="-2.617" upper="2.617" velocity="1.571"/>
   </joint>
 
   <link name="virtual_link">
   </link>
-
-
-
+  
 </robot>
